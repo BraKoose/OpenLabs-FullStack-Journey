@@ -1,4 +1,38 @@
 .container {
   background-color: #f5f5f5;
-  background-image: url;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: black;
+}
+
+.storename {
+  color: rgb(1, 1, 199);
+  font-size: large;
+  position: absolute;
+  font-size: 150px;
+  z-index: 2;
+  top: 30px;
+  left: 300px;
+  text-align: center;
+  font-family: "Festive", cursive;
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s;
+  text-shadow: 1px 5px 8px rgba(174, 65, 14, 0.6);
+}
+
+.profile {
+  background-color: black;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  position: absolute;
+  z-index: 3;
+  top: 250px;
+  left: 20px;
 }
