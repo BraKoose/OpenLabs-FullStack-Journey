@@ -16,3 +16,12 @@ body {
   text-align: left;
   font-family: "Festive", cursive;
 }
+
+.box1 {
+  width: 140px;
+  height: 140px;
+  background: blue;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+}
