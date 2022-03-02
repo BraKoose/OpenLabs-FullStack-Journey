@@ -1,6 +1,14 @@
+var calculate = {
+    A1 : null,
+    A2 :null,
+    A3:null,
+}
+
+
 function total()
 {
-        num1 = document.getElementById("A1").value;
-        num2 = document.getElementById("A2").value;
-        document.getElementById("result").innerHTML = num1 + num2;
+        calculate.A1 = document.getElementById("A1").value;
+        calculate.A2 = document.getElementById("A2").value;
+        calculate.A3 = calculate.A1 + calculate.A2;
+        document.getElementById("result").innerHTML = calculate.A3
 }
