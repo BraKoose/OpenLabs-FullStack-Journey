@@ -4,23 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Embedding Javascript</title>
+    <title>JavaScript Table</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <table>
-      <tr>
-        <td>Hi, I'm your first cell.</td>
-        <td>I'm your second cell.</td>
-        <td>I'm your third cell.</td>
-        <td>I'm your fourth cell.</td>
-      </tr>
-      <tr>
-        <td>Second row, first cell.</td>
-        <td>Cell 2.</td>
-        <td>Cell 3.</td>
-        <td>Cell 4.</td>
-      </tr>
-    </table>
+    <form>
+      <table>
+        <tr>
+          <th>Course Name</th>
+          <th>Test1</th>
+          <th>Test2</th>
+          <th>Total</th>
+          <th>Button</th>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><input type="text" /><span id="A1"></span></td>
+          <td><input type="text" /><span id="A2"></span></td>
+          <td><input type="text" /><span id="A3"></span></td>
+          <td><button type="button" id="btn12">Sum</button></td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" id="btn12">Sum</button></td>
+        </tr>
+        <tr>
+          <td>Javascript</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" id="btn12">Sum</button></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" id="btn12">Sum</button></td>
+        </tr>
+      </table>
+    </form>
 
     <script src="assets/script/script.js"></script>
   </body>

@@ -1,17 +1,6 @@
-alert("Welcome Open Labs")
-
-var myFirstName = 'Koose';
-var myAge = 21
-alert("welcome " + myFirstName + " my age is" + myAge)
-console.log(myFirstName)
-
-function sayHello(){
-    alert("Koose");
-
+function total()
+{
+        num1 = document.getElementById("A1").value;
+        num2 = document.getElementById("A2").value;
+        document.getElementById("result").innerHTML = num1 + num2;
 }
-function storeData(){
-    document.write("info Stored")
-
-}
-document.getElementById("myBtn").onclick = sayHello;
-document.getElementById("Store").onclick = storeData;
