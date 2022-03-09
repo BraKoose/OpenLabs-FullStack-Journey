@@ -30,64 +30,109 @@
   </head>
   <body>
     <center>
-      <h2>Javascript Assignment</h2>
       <div class="container">
-        <table class="table">
-          <tr>
-            <td>Course Name</td>
-            <td>test1</td>
-            <td>text 2</td>
-            <td>total</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td>
-              <input type="number" class="form-control" id="ht_1" value="0" />
-            </td>
-            <td>
-              <input type="number" class="form-control" value="0" id="ht_2" />
-            </td>
-            <td>
-              <span id="ht_total" class="form-control"></span>
-            </td>
-            <td>
-              <button class="btn btn-dark" onclick="htmlfun()">Total</button>
-            </td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>
-              <input type="number" class="form-control" id="ht_3" value="0" />
-            </td>
-            <td>
-              <input type="number" class="form-control" value="0" id="ht_4" />
-            </td>
-            <td>
-              <span id="css_total" class="form-control"></span>
-            </td>
-            <td>
-              <button class="btn btn-dark" onclick="Cssfun()">Total</button>
-            </td>
-          </tr>
-          <tr>
-            <td>JavaScript</td>
-            <td>
-              <input type="number" id="ht_5" value="0" class="form-control" />
-            </td>
-            <td>
-              <input type="number" value="0" id="ht_6" class="form-control" />
-            </td>
-            <td>
-              <span id="javascript_total" class="form-control"></span>
-            </td>
-            <td>
-              <button class="btn btn-dark" onclick="JavaScriptfun()">
-                Total
-              </button>
-            </td>
-          </tr>
-        </table>
+        <a
+          href="#"
+          class="list-group-item list-group-item-action active"
+          aria-current="true"
+        >
+          The current link item
+        </a>
+        <div class="list-group">
+          <h2>Javascript Assignment</h2>
+          <table class="table">
+            <tr>
+              <td>Course Name</td>
+              <td>test1</td>
+              <td>text 2</td>
+              <td>total</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="ht_1"
+                  value="0"
+                  oninput="htmlfun()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  id="ht_2"
+                  oninput="htmlfun()"
+                />
+              </td>
+              <td>
+                <span id="ht_total" class="form-control"></span>
+              </td>
+              <td>
+                <button class="btn btn-dark" onclick="">Total</button>
+              </td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="ht_3"
+                  value="0"
+                  oninput="Cssfun()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
+                  value="0"
+                  id="ht_4"
+                  oninput="Cssfun()"
+                />
+              </td>
+              <td>
+                <span id="css_total" class="form-control"></span>
+              </td>
+              <td>
+                <button class="btn btn-dark" onclick="">Total</button>
+              </td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>
+                <input
+                  type="number"
+                  id="ht_5"
+                  value="0"
+                  class="form-control"
+                  oninput="JavaScriptfun()"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  value="0"
+                  id="ht_6"
+                  class="form-control"
+                  oninput="JavaScriptfun()"
+                />
+              </td>
+              <td>
+                <span id="javascript_total" class="form-control"></span>
+              </td>
+              <td>
+                <button class="btn btn-dark" onclick="JavaScriptfun()">
+                  Total
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <!-- Option 1: Bootstrap Bundle with Popper -->
