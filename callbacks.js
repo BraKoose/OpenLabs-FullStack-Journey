@@ -10,7 +10,7 @@ var start = function (callback) {
 }
 start(welcomeMsg)
 
-var look = function (dir) {
+let look = function (dir) {
     if (dir === 'west') {
         console.log('There is a small mailbox here.')
         if (dir === 'east');
@@ -21,7 +21,7 @@ var look = function (dir) {
 
 
 }
-var walk = function (dir) {
+let walk = function (dir) {
     if (dir === 'west') {
         console.log('Its is very dark, you are likely to be eaten by a grue!')
     }
@@ -31,5 +31,5 @@ var walk = function (dir) {
 }
 
 getInput('east', look)
-getInput('south', walk)
 getInput('west', walk)
+getInput('south', walk)
