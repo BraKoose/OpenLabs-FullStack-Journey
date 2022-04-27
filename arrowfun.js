@@ -3,11 +3,11 @@ var codeBoy = {
     age : 120,
     profession: "Android Associate Google Dev",
 
-    handledDeveloper: function(profession, handler){
+    handledDeveloper: function(profession,handler){
         handler(profession);
     },
     recieve: function(){
-        this.handledDeveloper("Android Developer", profession => console.log(profession + "" , this.name));
+        this.handledDeveloper("Android Developer", profession => console.log(profession + "" , this.name, "is",  + this.age,  "old"));
     }
 }
 codeBoy.recieve();
