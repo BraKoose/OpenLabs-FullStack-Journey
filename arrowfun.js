@@ -7,7 +7,7 @@ var codeBoy = {
         handler(profession);
     },
     recieve: function(){
-        this.handledDeveloper("Android Developer", profession => console.log(profession + this.name));
+        this.handledDeveloper("Android Developer", profession => console.log(profession + " ", this.name));
     }
 }
 codeBoy.recieve();
