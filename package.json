@@ -1,0 +1,23 @@
+{
+  "name": "learnnodejs",
+  "version": "1.0.0",
+  "description": "learning Node Js ",
+  "main": "N",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BraKoose/OpenLabs-FullStack-Journey.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BraKoose/OpenLabs-FullStack-Journey/issues"
+  },
+  "homepage": "https://github.com/BraKoose/OpenLabs-FullStack-Journey#readme",
+  "dependencies": {
+    "express": "^4.18.0",
+    "yarn": "^1.22.18"
+  }
+}
