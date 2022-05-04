@@ -11,5 +11,5 @@ setInterval(() => {
     console.log('time Interval')
 }, 1000);
 
-console.log(__filename)
-console.log(__dirname)
+console.log(__filename);
+console.log(__dirname);
