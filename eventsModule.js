@@ -15,7 +15,8 @@ var connecthandler = function conntected() {
 
 //Bind the connection event with the handler
 eventEmitter.on('data_recieved', function () {
-    console.log('data received succesfully.');
+    console.log('data received succesfully.')
+        ;
 })
 
 //fire theh connection event 
