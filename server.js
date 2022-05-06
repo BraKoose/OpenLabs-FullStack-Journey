@@ -12,12 +12,21 @@ const server = http.createServer((req, res) => {
     switch (req.url) {
         case '/':
             path += 'index.html'
+            res.statusCode = 200;
             break;
         case '/about':
             path += 'about.html'
+            res.statusCode = 200;
+            break;
+        case '/about-me':
+            res.statusCode = 301;
+            res.setHeader('Location', '/about');
+            res.end();
             break;
         default:
             path += '404.html';
+            res.statusCode = 404;
+
             break
     }
 
@@ -33,7 +42,7 @@ const server = http.createServer((req, res) => {
 
 });
 
-server.listen(8990, 'localhost', () => {
-    console.log('listening for resquest on port 8990')
+server.listen(7878, 'localhost', () => {
+    console.log('listening for resquest on port 7878')
 });
 
