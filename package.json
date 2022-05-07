@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BraKoose/OpenLabs-FullStack-Journey/issues"
   },
-  "homepage": "https://github.com/BraKoose/OpenLabs-FullStack-Journey#readme"
+  "homepage": "https://github.com/BraKoose/OpenLabs-FullStack-Journey#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
