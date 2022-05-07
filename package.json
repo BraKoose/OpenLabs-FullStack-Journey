@@ -1,0 +1,20 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "learning on youtube",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BraKoose/OpenLabs-FullStack-Journey.git"
+  },
+  "author": "Koose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BraKoose/OpenLabs-FullStack-Journey/issues"
+  },
+  "homepage": "https://github.com/BraKoose/OpenLabs-FullStack-Journey#readme"
+}
