@@ -1,21 +1,20 @@
 const express = require('express');
-const { Db, CURSOR_FLAGS } = require('mongodb');
-const { mongo } = require('mongoose');
 
 const morgan = require('morgan');
+
+const mongoose = require('mongoose')
+
 
 //create app 
 
 const app = express();
 
-// //mongoDb connection
-// const MongoClient = require('mongo').MongoClient;
-// const url = 'mongodb://localhost/SaharaBankTrust';
 
-// MongoClient.connect(url, (err, db) => {
-//     console.log('connected');
-//     db.close();
-// });
+//connect to mongoDB 
+const dbURI = 'mongodb+srv://makekoose:Dobetter$$$2022@cluster0.giein.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+mongoose.connect(dbURI)
+
 
 //register view engine
 app.set('view engine', 'ejs');
@@ -23,7 +22,9 @@ app.set('view engine', 'ejs');
 
 //listen for req
 
-app.listen(7676);
+app.listen(7676, () => {
+    console.log('listening on port 127.0.0.1:7676')
+});
 
 
 //middleware and static files
