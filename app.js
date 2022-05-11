@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 
 const Blog = require('./models/blog');
 const { result } = require('lodash');
+const { render } = require('express/lib/response');
 
 
 //create app 
@@ -31,7 +32,8 @@ app.set('view engine', 'ejs');
 
 
 //middleware and static files
-app.use(express.static('public'))
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan('dev'))
 
@@ -46,66 +48,12 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/add_blog', (req, res) => {
-
-    const blog = new Blog(
-
-        {
-            title: 'Google Developer Associate Damn!',
-            snippet: 'Congratulation you got intership with Google',
-            body: 'He is rich and Famous now, its days in work not one day wonder'
-
-        }
-    );
-    blog.save()
-        .then((result) => {
-            res.send(result)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-});
-
-
-app.get('/all-blogs', (req, res) => {
-    Blog.find()
-        .then((result) => {
-            res.send(result)
-        });
-});
-
-app.get('/single-blog', (req, res) => {
-    Blog.findById('627aeaa799da24fe345b9f32')
-        .then((result) => {
-            res.send(result)
-        }).catch((err) => {
-            console.log(err)
-        });
-})
 
 
 app.get('/', (req, res) => {
     //  res.send('<p>Home Page</p>')
 
-    const blogs = [
-        {
-            title: "Yougest Entreprenuer gets fund", snippet: "Bra Koose, CEO of 404 solutions is considered as the youngest entreprenuer with a massive market cap of 900M in 2years of being in Business"
-        },
-        {
-            title: "Best App of the Year", snippet: "Trotro Live emerges as the best citizen app in Ghana approved by Google"
-        },
-
-        {
-            title: "The founder of Trotro Live a FreeMason ?", snippet: "Bra Koose, CEO of 404 solutions is considered a Devil worshipper ?"
-        }
-    ]
-    res.render('index', { title: 'Home', blogs })
-
-});
-
-app.get('/about', (req, res) => {
-    //  res.send('<p>Home Page</p>')
-    res.render('about', { title: 'About' })
+    res.redirect('/blogs')
 
 });
 
@@ -114,10 +62,53 @@ app.get('/about-us', (req, res) => {
     res.redirect('/about');
 });
 
+app.get('/about', (req, res) => {
+    //  res.send('<p>Home Page</p>')
+    res.render('about', { title: 'About' })
+
+});
+
+app.get('/blogs', (req, res) => {
+
+    Blog.find()
+        .then((result) => {
+            res.render('index', { title: 'All Blogs', blogs: result })
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+});
+
+
+app.post('/blogs', (req, res) => {
+    const blog = new Blog(req.body);
+
+    blog.save()
+        .then((result) => {
+            res.redirect('/blogs');
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+
+});
+
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id
+    Blog.findById(id)
+        .then(result => {
+            res.render('details', { blog: result, title: 'Blog Details' });
+        })
+        .catch(err => {
+            console.log(err)
+        });
+})
 
 app.get('/blogs/create', (req, res) => {
     res.render('create', { title: 'Create a Blog' });
-})
+});
+
+
 
 //404 Pages ablways at the bottom of the routing 
 app.use((req, res) => {
